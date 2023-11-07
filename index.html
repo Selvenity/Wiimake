@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Menu | Onliine</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js"></script>
-    <script src="js/jquery.js"></script>
+    <title>Wii Shop Channel | Onliine</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/shop.css" />
+    <script src="/js/script.js"></script>
+    <script src="/js/jquery.js"></script>
+    <style>body {animation: fadeIn 500ms linear forwards}</style>
 
     <meta property="og:site_name" content="Onliine" />
 	<meta property="og:type" content="website" />
@@ -22,170 +24,70 @@
     <meta name="apple-mobile-web-app-status-bar" content="#222222" />
 </head>
 <body>
-    <div class="splash">
+    <div class="header">Wii Shop Channel</div>
+    <h2>Titles you've downloaded</h2>
+    <div class="titles">
+        <div class="product">
+            <img src="../assets/channels/homebrew/video.gif" />
+            <div>
+                <span class="title">Homebrew Channel</span><hr>
+                <span class="method">homebrew();</span><br>
+                <span class="belonging">Virtual Disc</span>
+            </div>
+        </div>
+        <div class="product">
+            <img src="../assets/channels/bottomgear/thumb.jpg" />
+            <div>
+                <span class="title">BOTTOM GEAR™</span><hr>
+                <span class="method">bottomgear();</span><br>
+                <span class="belonging">Virtual Disc</span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <a href="/" class="buttonlike">Wii Menu</a>
         <div>
-            <img src="assets/return.gif" class="channels" />
-            <span class="tip"><strong>PRO TIP:</strong>&nbsp;Right-click to open the Wii pause menu</span>
+            <span class="pt">&infin;</span>
+            <span class="label">Wii Points</span>
         </div>
-    </div>
-
-    <div class="main-menu">
-        <div class="grid">
-            <div class="prev">
-                <img src="assets/prev-default.png" class="def" />
-                <img src="assets/prev-hover.png" class="hover" />
-            </div>
-            <div class="ch-c">
-                <div class="ch occupied" data-id="disc">
-                    <img src="channelart/disc/disc.png" class="spinnin" />
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag" id="discTag">Disc Channel</span>
-                </div>
-                <div class="ch occupied" data-id="mii">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Mii Channel</span>
-                </div>
-                <div class="ch occupied" data-id="photo">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Photo Channel</span>
-                </div>
-                <div class="ch occupied" data-id="shop" data-href="/shop">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Wii Shop Channel</span>
-                </div>
-                <div class="ch occupied" data-id="news">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">News Channel</span>
-                </div>
-                <div class="ch occupied" data-id="onliine" data-href="//github.com/Ascript89/onliine">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Onliine Channel</span>
-                </div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-            </div>
-            <div class="ch-c">
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-            </div>
-            <div class="next">
-                <img src="assets/next-hover.png" class="hover" />
-                <img src="assets/next-default.png" class="def" />
-            </div>
-        </div>
-    
-        <div class="bottom-bar">
-            <div class="lateral left">
-                <img src="assets/left-button.png" class="left-btn" />
-                <img src="assets/wii-button.png" class="wii-btn buttonlike" onclick="startAudio()" />
-                <span class="tag">Wii Settings</span>
-            </div>
-            <div class="info">
-                <span class="jg">Onliine</span>
-                <span id="hour"></span>
-                <span id="date"></span>
-            </div>
-            <div class="lateral right">
-                <img src="assets/right-button.png" class="right-btn" />
-                <img src="assets/mail-button.png" class="diary-btn buttonlike" onclick="startAudio()" />
-                <span class="tag">Wii Message Board</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="msgboard">
-        <div class="bg"></div>
-        <div class="card buttonlike" onclick="letterIn()">
-            <img src="assets/petermiiffin-head.png" class="mii" /><br>
-            <span>Hello Lois</span>
-        </div>
-        <div class="opened">
-            <div class="memo">
-                <span class="title">Memo</span>
-                <img src="assets/petermiiffin-head.png" class="mii" title="Peter Miiffin lol" />
-                <div class="lines">
-                    <span>This is a nice sample letter,</span>
-                    <span>with multiple lines.</span>
-                </div>
-            </div>
-            <a class="alt-btn back">Back</a>
-        </div>
-        <div class="bottom">
-            <span id="date2"></span>
-            <div class="lateral">
-                <img src="assets/right-button.png" class="right-btn" />
-                <img src="assets/backtomenu.png" class="back-btn backtowiimenu buttonlike" />
-                <span class="tag">Wii Menu</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="ch-selection">
-        <div class="thecontent">
-            <div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div>
-            <img id="videoSpec" src="" />
-            <div class="buttons">
-                <a class="buttonlike" onclick="menuReturn()">Wii Menu</a>
-                <a class="buttonlike letsago" onclick="start()">Start</a>
-            </div>
-        </div>
+        <a href="https://developer.chrome.com/docs/devtools/console/javascript/"
+        class="buttonlike" target="_blank">Shopping Guide</a>
     </div>
 
     <div class="home-menu">
         <div class="bar-top close-pause-menu">
             <span>HOME Menu</span>
-            <img src="assets/home-close.png" />
+            <img src="/assets/home-close.png" />
         </div>
         <div class="in-between">
             <a class="buttonlike backtomenu">Wii Menu</a>
-            <!-- <a class="buttonlike" onclick="window.location.reload()">Reset</a> -->
+            <a class="buttonlike" onclick="window.location.reload()">Reset</a>
         </div>
         <div class="bar-bottom">
-            <img src="assets/remote.png" class="remote" />
+            <img src="/assets/remote.png" class="remote" />
             <div>
                 <div class="battery">
                     <div>
                         <span>P1</span>
-                        <img src="assets/power-full.png" />
+                        <img src="/assets/power-full.png" />
                     </div>
                     <div>
                         <span>P2</span>
-                        <img src="assets/power-empty.png" />
+                        <img src="/assets/power-empty.png" />
                     </div>
                     <div>
                         <span>P3</span>
-                        <img src="assets/power-empty.png" />
+                        <img src="/assets/power-empty.png" />
                     </div>
                     <div>
                         <span>P4</span>
-                        <img src="assets/power-empty.png" />
+                        <img src="/assets/power-empty.png" />
                     </div>
                 </div>
                 <div class="text">Wii Remote Settings</div>
             </div>
         </div>
     </div>
-
     <div class="returndialog">
         <div class="msgbox">
             <div class="text">
@@ -198,142 +100,20 @@
             </div>
         </div>
     </div>
-
-    <div class="settings">
-        <div class="settings-content">
-            <div class="topbar">
-                <img src="assets/wii-logo.svg" />
-            </div>
-            <div class="cells">
-                <a class="info buttonlike" href="/credits" target="_blank"></a>
-                <a class="stngs buttonlike" href="/settings"></a>
-            </div>
-            <div class="bottombar">
-                <a class="alt-btn close">Back</a>
-            </div>
-        </div>
-    </div>
-
     <div class="ui-sfx">
-        <audio id="startup" src="audio/startup.mp3"></audio>
-        <audio id="bg-music" src="audio/bg-music.mp3" loop></audio>
         <audio id="hover" src="audio/button-hover.mp3"></audio>
         <audio id="select" src="audio/button-select.mp3"></audio>
-        <audio id="zip" src="audio/zip.mp3"></audio>
         <audio id="back" src="audio/back.mp3"></audio>
-        <audio id="start" src="audio/start.mp3"></audio>
-        <audio id="chSpec" src=""></audio>
         <audio id="homeIn" src="audio/home-in.mp3"></audio>
         <audio id="homeOut" src="audio/home-out.mp3"></audio>
         <audio id="rm1" src="audio/returntomenu-1.mp3"></audio>
         <audio id="rm2" src="audio/returntomenu-2.mp3"></audio>
-        <audio id="nextprev" src="audio/nextprev.mp3"></audio>
-        <audio id="letterIn" src="audio/letter-in.mp3"></audio>
     </div>
-
     <script>
-        // CHANNEL ART LOAD
-        $(document).ready(function() {
-            $('.ch.occupied').each(function() {
-                var artsrc = 'channelart/' + $(this).data('id') + '/channel.html';
-                $(this).find('iframe').attr('src', artsrc);
-            });
-        });
-
-        // CLICKS ON CHANNEL
-        $(".main-menu").on("click", ".occupied .onhover", function() {
-            var centerX = $(this).offset().left + $(this).width() / 2;
-            var centerY = $(this).offset().top + $(this).height() / 2;
-            $(".main-menu").css({"transform-origin" : centerX + "px " + centerY + "px 0" });
-            $(".ch-selection").css({"transform-origin" : centerX + "px " + centerY + "px 0" });
-            $(".main-menu").addClass('ch-trans-on');
-        });
-        
-        $(document).on("click", ".occupied", function() {
-            console.log($(this).data('id'));
-
-            var audiosrc = 'assets/channels/' + $(this).data('id') + '/audio.mp3';
-            $("#chSpec").attr('src', audiosrc);
-
-            var videosrc = 'assets/channels/' + $(this).data('id') + '/video.gif';
-            $("#videoSpec").attr('src', videosrc);
-
-            $("#chSpec")[0].currentTime = 0;
-            var currentaudio = document.getElementById("chSpec");
-            currentaudio.play();
-
-            $(".letsago").attr('data-start', $(this).data('href'));
-            if ($(this).attr("data-href")) {
-                $(".letsago").attr('data-start', $(this).data('href'));
-            }
-            else {
-                $(".letsago").addClass("disabled-btn");
-            }
-        });
-
-        // CHANNEL START
-        function start() {
-            var audio = document.getElementById("start");
-            audio.volume = 0.4; audio.play();
-            if ($(".letsago").attr("data-start")) {
-                setTimeout(() => {document.body.classList.add("fadeOut");}, 1000);
-                setTimeout(() => {window.location.href = $(".letsago").data("start");}, 2000);
-            }
-            else {
-                alert("ERROR: No endpoint has been defined for this channel.");
-            }
-
-            var chaudio = $('#chSpec');
-            var duration = 1000;
-            var steps = 10;
-
-            function decreaseVolume() {
-                var initialVolume = chaudio[0].volume;
-                var step = initialVolume / steps;
-                var delay = duration / steps;
-
-                for (var i = 0; i < steps; i++) {
-                    setTimeout(function() {
-                    chaudio[0].volume -= step;
-                    }, i * delay);
-                }
-            } decreaseVolume();
-        }
-
-        // RETURNS TO THE MENU
-        function menuReturn() {
-            var currentaudio = document.getElementById("chSpec");
-            currentaudio.pause();
-            $("#videoSpec").attr('src', '');
-
-            $(".letsago").removeClass("disabled-btn");
-
-            $(".main-menu").removeClass('ch-trans-on');
-            $(".main-menu").addClass('chsout-anim');
-            setTimeout(() => {$(".main-menu").removeClass('chsout-anim');}, 1000);
-            select(); back(); bgmus();
-        }
-
-        //PAGE PREV/NEXT
-        $('.prev').on('click', function() {
-            nextprev();
-            $('.grid').animate({ scrollLeft: '-=' + $('.grid').width() }, 0);
-            $(".prev").css("display", "none");
-            $(".next").css("display", "flex");
-        });
-
-        $('.next').on('click', function() {
-            nextprev();
-            $('.grid').animate({ scrollLeft: '+=' + $('.grid').width() }, 0);
-            $(".next").css("display", "none");
-            $(".prev").css("display", "flex");
-            
-        });
-
         // HOME/PAUSE MENU
         if (document.addEventListener) {
             document.addEventListener('contextmenu', function(e) {
-                bgmusPause(); homeIn();
+                homeIn();
                 $(".home-menu").css("display", "grid");
                 e.preventDefault();
             }, false);
@@ -361,73 +141,6 @@
 
         $(".closedialog").click(event => {
             $(".returndialog").css("display", "none");
-        });
-
-        // INSERT DISC FUNCTIONS (SNEAKY)
-        function homebrew() {
-            $("#discTag").text("Homebrew Channel");
-            $(".spinnin").addClass("disc-insert-anim");
-            var discCh= $('.ch.occupied[data-id="disc"]');
-            discCh.find('iframe').attr('src', 'channelart/homebrew/channel.html');
-            discCh.attr('data-id', 'homebrew');
-            return("Homebrew Channel unlocked (in the works)");
-        }
-
-        function bottomgear() {
-            $("#discTag").text("BOTTOM GEAR™");
-            $(".spinnin").addClass("disc-insert-anim");
-            var discCh = $('.ch.occupied[data-id="disc"]');
-            discCh.find('iframe').attr('src', 'channelart/bottomgear/channel.html');
-            discCh.attr('data-id', 'bottomgear');
-            return("WELCOME TO BO'OM GEAR MATES (in the works)");
-        }
-
-        function eject() {
-            $("#discTag").text("Disc Channel");
-            $(".spinnin").removeClass("disc-insert-anim");
-            var discCh = $('.ch.occupied[data-id="homebrew"]');
-            discCh.find('iframe').attr('src', 'channelart/disc/channel.html');
-            discCh.attr('data-id', 'disc');
-
-            var discCh = $('.ch.occupied[data-id="bottomgear"]');
-            discCh.find('iframe').attr('src', 'channelart/disc/channel.html');
-            discCh.attr('data-id', 'disc');
-
-            return("Disc ejected");
-        }
-
-        // SETTINGS
-        $(document).ready(() => {
-            $(".wii-btn").click(() => {
-                $(".settings").css("display", "block");
-                setTimeout(() => {$(".settings-content").fadeIn();}, 1000);
-                $(".grid").fadeOut();
-            });
-
-            $(".close").click(() => {
-                $(".grid").fadeIn();
-                $(".settings-content").fadeOut();
-                setTimeout(() => {$(".settings").fadeOut();}, 3500);
-            });
-        });
-
-        // MESSAGE BOARD
-        $(".card.buttonlike").click(event => {
-            $(".opened").css("display", "flex");
-            $(".bg").css("display", "block");
-        });
-
-        $(".alt-btn.back").click(event => {
-            $(".opened").css("display", "none");
-            $(".bg").css("display", "none");
-        });
-
-        $(".backtowiimenu").click(event => {
-            $(".msgboard").fadeOut();
-        });
-
-        $(".diary-btn").click(event => {
-            $(".msgboard").css("display", "flex");
         });
     </script>
 </body>
